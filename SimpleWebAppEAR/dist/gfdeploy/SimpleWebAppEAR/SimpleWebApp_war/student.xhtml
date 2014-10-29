@@ -1,0 +1,69 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+ xmlns:h="http://xmlns.jcp.org/jsf/html"
+ xmlns:f="http://xmlns.jcp.org/jsf/core"
+ xmlns:myTags="http://java.sun.com/jsf/composite/myTags" >
+    <h:head>
+        <title>Learning</title>
+    </h:head>
+    <h:body>
+<!--all jsf tags: http://www.jsftoolbox.com/documentation/help/12-TagReference/html/index.jsf -->
+        
+        <h:form id="formularioLogin" onsubmit="return doSubmit();">
+            <table align="center"><tr><td>
+                <h:outputText style="font-size: 24px;font-family: Arial,sans-serif;" value="Formulario Estudiante" />
+                    </td></tr>
+            </table>
+            <table align="center">
+                <tr>
+                    <td colspan="2" style="font-weight: bold; size: 20px;">Ingresa los datos del estudiante</td>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold; size: 12px; color: blue;" align="right">Nombre : </td>
+                    <td><h:inputText value="#{studentBean.name}"/></td>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold; size: 12px; color: blue;" align="right">Edad : </td>
+                    <td><h:inputText value="#{studentBean.edad}" id="edad">
+                            <f:convertNumber type="number" integerOnly="true" />
+                        </h:inputText></td>
+                </tr>
+                <tr>
+                    <td>
+                        <h:selectManyCheckbox id="subscriptions" value="#{studentBean.sport}"  layout="pageDirection">
+                              <f:selectItem id="item1" itemLabel="Futbol" itemValue="1" />
+                              <f:selectItem id="item2" itemLabel="Baloncesto" itemValue="2" />
+                              <f:selectItem id="item3" itemLabel="Baseball" itemValue="3" />
+                              <f:selectItem id="item4" itemLabel="Tenis de mesa" itemValue="4" />
+                        </h:selectManyCheckbox>
+                    </td>
+                </tr>
+                <tr>
+                    <td><input type="button" value="Cancelar" style="font-size: 14px; color: blue;"/></td>
+                    <td><h:commandButton value="Aceptar" action="#{studentBean.validarEstudiante}" style="font-size: 14px; color: blue;"/></td>
+                </tr>
+                <tr>
+                    <td>
+                        <myTags:footer fieldId="footer" title="Metaleo.com"/>
+                    </td>
+                </tr>
+            </table>
+
+        </h:form>
+        
+<script type="text/javascript"><!--
+        function doSubmit() {
+            var edad = document.getElementById("formularioLogin:edad").value;
+            if(edad < 18){
+                alert("estudiante muy joven");
+                return false;
+            }
+            return true;
+        }
+// -->        
+</script>
+        
+    </h:body>
+</html>
+
