@@ -3,13 +3,7 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/lcardozo/Documents/NetBeansProjects/SimpleWebApp/web/WEB-INF/web.xml</file>
-            <file>file:/C:/Users/lcardozo/Documents/NetBeansProjects/SimpleWebApp/src/java/com/metaleo/backbeans/StudentBean.java</file>
-            <file>file:/C:/Users/lcardozo/Documents/NetBeansProjects/SimpleWebApp/web/index.xhtml</file>
-            <file>file:/C:/Users/lcardozo/Documents/NetBeansProjects/SimpleWebApp/web/resources/myTags/footer.xhtml</file>
-            <file>file:/C:/Users/lcardozo/Documents/NetBeansProjects/SimpleWebApp/web/student.xhtml</file>
-            <file>file:/C:/Users/lcardozo/Documents/NetBeansProjects/SimpleWebApp/web/welcome.xhtml</file>
-            <file>file:/C:/Users/lcardozo/Documents/NetBeansProjects/SimpleWebApp/src/java/com/metaleo/backbeans/SystemBean.java</file>
+            <file>file:/C:/mine/BasicAppJSF-EJB-JPA/SimpleWebApp/web/student.xhtml</file>
         </group>
     </open-files>
 </project-private>

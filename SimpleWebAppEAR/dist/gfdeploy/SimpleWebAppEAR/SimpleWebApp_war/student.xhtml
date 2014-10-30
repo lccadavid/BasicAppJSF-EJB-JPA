@@ -10,7 +10,7 @@
     <h:body>
 <!--all jsf tags: http://www.jsftoolbox.com/documentation/help/12-TagReference/html/index.jsf -->
         
-        <h:form id="formularioLogin" onsubmit="return doSubmit();">
+        <h:form id="formularioLogin" onsubmit="doSubmit();">
             <table align="center"><tr><td>
                 <h:outputText style="font-size: 24px;font-family: Arial,sans-serif;" value="Formulario Estudiante" />
                     </td></tr>
@@ -25,7 +25,7 @@
                 </tr>
                 <tr>
                     <td style="font-weight: bold; size: 12px; color: blue;" align="right">Edad : </td>
-                    <td><h:inputText value="#{studentBean.edad}" id="edad">
+                    <td><h:inputText value="#{studentBean.edad}" id="edad" >
                             <f:convertNumber type="number" integerOnly="true" />
                         </h:inputText></td>
                 </tr>
@@ -44,6 +44,7 @@
                     <td><h:commandButton value="Aceptar" action="#{studentBean.validarEstudiante}" style="font-size: 14px; color: blue;"/></td>
                 </tr>
                 <tr>
+                    <td><h:commandButton value="Bajar excel" action="#{studentBean.bajarExcel}" style="font-size: 14px; color: blue;"/></td>
                     <td>
                         <myTags:footer fieldId="footer" title="Metaleo.com"/>
                     </td>
@@ -54,9 +55,9 @@
         
 <script type="text/javascript"><!--
         function doSubmit() {
-            var edad = document.getElementById("formularioLogin:edad").value;
+            var edad = document.getElementById('formularioLogin:edad').value;
             if(edad < 18){
-                alert("estudiante muy joven");
+                alert('estudiante muy joven');
                 return false;
             }
             return true;
